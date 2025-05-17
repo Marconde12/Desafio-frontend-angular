@@ -1,0 +1,42 @@
+<div class="header-actions">
+  <a routerLink="/posts/new" class="new-post-button">
+    <span>+</span> Nova Notícia
+  </a>
+</div>
+
+<section class="container">
+  <main class="main-content">
+    <div class="search-header">
+      <h1>Exibindo Resultado de Busca por "COVID-19"</h1>
+      <p class="results-count">Encontramos um total de {{ (posts$ | async)?.length }} resultados para a sua busca</p>
+    </div>
+
+    <div class="posts-grid">
+      <article class="post-card" *ngFor="let post of posts$ | async">
+        <div class="card-header">
+          <span class="category-tag">COVID-19</span>
+          <h2 class="post-title">{{ post.title }}</h2>
+        </div>
+        <p class="post-excerpt">{{ post.description }}</p>
+        <a [routerLink]="['/posts', post.id]" class="read-more">Ler mais</a>
+      </article>
+    </div>
+  </main>
+
+  <aside class="sidebar">
+    <div class="categories-section">
+      <h3 class="sidebar-title">Categorias</h3>
+      <ul class="categories-list">
+        <li>catg1</li>
+        <li>catg2</li>
+        <li>catg3</li>
+        <li>catg4</li>
+      </ul>
+    </div>
+
+    <div class="search-section">
+      <h3 class="sidebar-title">Procurando alguma notícia?</h3>
+      <input type="text" placeholder="Pesquisar por..." class="search-input">
+    </div>
+  </aside>
+</section>

@@ -1,0 +1,11 @@
+<div class="post-detail-container">
+  <a routerLink="/" class="back-link">← Voltar para lista</a>
+  
+  <div *ngIf="post$ | async as post" class="post-content">
+    <h1>{{ post.title }}</h1>
+    <img [src]="post.avatar" alt="Imagem da notícia" class="post-image">
+    <p class="post-description">{{ post.description }}</p>
+    <div class="post-body">{{ post.content }}</div>
+    <div class="post-meta">Publicado em: {{ post.createdAt | date:'dd/MM/yyyy' }}</div>
+  </div>
+</div>
