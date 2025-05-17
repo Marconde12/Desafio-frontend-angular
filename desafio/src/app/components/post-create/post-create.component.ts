@@ -33,7 +33,8 @@ export class PostCreateComponent {
       title: this.form.value.title!,
       description: this.form.value.description!,
       content: this.form.value.content!,
-      avatar: this.form.value.avatar!
+      avatar: this.form.value.avatar!,
+      imageUrl: this.form.value.avatar!
     };
 
     this.postService.createPost(newPost).subscribe({

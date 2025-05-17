@@ -7,6 +7,7 @@ export interface Post {
   title: string;
   description: string;
   content: string;
+  imageUrl: string;
   avatar: string;
   createdAt: string;
 }

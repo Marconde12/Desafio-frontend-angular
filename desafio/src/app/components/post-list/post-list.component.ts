@@ -10,7 +10,7 @@ import { PostService } from '../../services/post.service';
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.css']
 })
-export class PostListComponent {  // <-- Certifique-se que está exportando a classe
+export class PostListComponent { 
   private postService = inject(PostService);
   posts$ = this.postService.getPosts();
 }
