@@ -91,7 +91,7 @@ A aplicação consome os seguintes endpoints simulados:
 
 **Marcus Vinicius**  
 Desenvolvedor Frontend em formação  
-[LinkedIn](https://www.linkedin.com/in/seu-link) *(adicione seu link se quiser)*
+[LinkedIn](https://www.linkedin.com/in/marcus-vincius/)
 
 ---
 
